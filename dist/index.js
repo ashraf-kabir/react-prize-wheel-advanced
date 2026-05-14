@@ -7,6 +7,7 @@ import React, {
   useState,
   useCallback
 } from "react";
+import { jsx, jsxs } from "react/jsx-runtime";
 var PrizeWheel = forwardRef(function PrizeWheel2({
   segments = [],
   segColors = [],
@@ -211,7 +212,7 @@ var PrizeWheel = forwardRef(function PrizeWheel2({
     `C ${ptrW - 3} ${ptrH * 0.35}, ${ptrW * 0.85} ${ptrH * 0.62}, ${half} ${tipY}`,
     "Z"
   ].join(" ");
-  return /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ jsxs(
     "div",
     {
       style: {
@@ -220,86 +221,100 @@ var PrizeWheel = forwardRef(function PrizeWheel2({
         flexDirection: "column",
         alignItems: "center",
         userSelect: "none"
-      }
-    },
-    /* @__PURE__ */ React.createElement(
-      "div",
-      {
-        style: {
-          position: "relative",
-          zIndex: 20,
-          marginBottom: -overlap,
-          filter: `drop-shadow(0 5px 10px rgba(0,0,0,0.65)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))`,
-          lineHeight: 0
-        }
       },
-      /* @__PURE__ */ React.createElement(
-        "svg",
-        {
-          width: ptrW,
-          height: ptrH,
-          viewBox: `0 0 ${ptrW} ${ptrH}`,
-          xmlns: "http://www.w3.org/2000/svg",
-          overflow: "visible"
-        },
-        /* @__PURE__ */ React.createElement("defs", null, /* @__PURE__ */ React.createElement("linearGradient", { id: "ptrBody", x1: "0%", y1: "0%", x2: "100%", y2: "100%" }, /* @__PURE__ */ React.createElement("stop", { offset: "0%", stopColor: lighten(primaryColor, 65) }), /* @__PURE__ */ React.createElement("stop", { offset: "40%", stopColor: primaryColor }), /* @__PURE__ */ React.createElement("stop", { offset: "100%", stopColor: darken(primaryColor, 45) })), /* @__PURE__ */ React.createElement("radialGradient", { id: "ptrShine", cx: "38%", cy: "28%", r: "58%" }, /* @__PURE__ */ React.createElement("stop", { offset: "0%", stopColor: "rgba(255,255,255,0.6)" }), /* @__PURE__ */ React.createElement("stop", { offset: "100%", stopColor: "rgba(255,255,255,0)" }))),
-        /* @__PURE__ */ React.createElement(
-          "path",
+      children: [
+        /* @__PURE__ */ jsx(
+          "div",
           {
-            d: bodyPath,
-            fill: "url(#ptrBody)",
-            stroke: darken(primaryColor, 25),
-            strokeWidth: "1.5",
-            strokeLinejoin: "round"
+            style: {
+              position: "relative",
+              zIndex: 20,
+              marginBottom: -overlap,
+              filter: `drop-shadow(0 5px 10px rgba(0,0,0,0.65)) drop-shadow(0 2px 4px rgba(0,0,0,0.4))`,
+              lineHeight: 0
+            },
+            children: /* @__PURE__ */ jsxs(
+              "svg",
+              {
+                width: ptrW,
+                height: ptrH,
+                viewBox: `0 0 ${ptrW} ${ptrH}`,
+                xmlns: "http://www.w3.org/2000/svg",
+                overflow: "visible",
+                children: [
+                  /* @__PURE__ */ jsxs("defs", { children: [
+                    /* @__PURE__ */ jsxs("linearGradient", { id: "ptrBody", x1: "0%", y1: "0%", x2: "100%", y2: "100%", children: [
+                      /* @__PURE__ */ jsx("stop", { offset: "0%", stopColor: lighten(primaryColor, 65) }),
+                      /* @__PURE__ */ jsx("stop", { offset: "40%", stopColor: primaryColor }),
+                      /* @__PURE__ */ jsx("stop", { offset: "100%", stopColor: darken(primaryColor, 45) })
+                    ] }),
+                    /* @__PURE__ */ jsxs("radialGradient", { id: "ptrShine", cx: "38%", cy: "28%", r: "58%", children: [
+                      /* @__PURE__ */ jsx("stop", { offset: "0%", stopColor: "rgba(255,255,255,0.6)" }),
+                      /* @__PURE__ */ jsx("stop", { offset: "100%", stopColor: "rgba(255,255,255,0)" })
+                    ] })
+                  ] }),
+                  /* @__PURE__ */ jsx(
+                    "path",
+                    {
+                      d: bodyPath,
+                      fill: "url(#ptrBody)",
+                      stroke: darken(primaryColor, 25),
+                      strokeWidth: "1.5",
+                      strokeLinejoin: "round"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "ellipse",
+                    {
+                      cx: half,
+                      cy: ballR * 0.82,
+                      rx: ptrW * 0.26,
+                      ry: ballR * 0.36,
+                      fill: "url(#ptrShine)"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "circle",
+                    {
+                      cx: half,
+                      cy: ballR,
+                      r: half - 3,
+                      fill: "none",
+                      stroke: "rgba(255,255,255,0.45)",
+                      strokeWidth: "1.2"
+                    }
+                  ),
+                  /* @__PURE__ */ jsx(
+                    "circle",
+                    {
+                      cx: half * 0.72,
+                      cy: ballR * 0.58,
+                      r: ptrW * 0.07,
+                      fill: "rgba(255,255,255,0.7)"
+                    }
+                  )
+                ]
+              }
+            )
           }
         ),
-        /* @__PURE__ */ React.createElement(
-          "ellipse",
+        /* @__PURE__ */ jsx(
+          "canvas",
           {
-            cx: half,
-            cy: ballR * 0.82,
-            rx: ptrW * 0.26,
-            ry: ballR * 0.36,
-            fill: "url(#ptrShine)"
-          }
-        ),
-        /* @__PURE__ */ React.createElement(
-          "circle",
-          {
-            cx: half,
-            cy: ballR,
-            r: half - 3,
-            fill: "none",
-            stroke: "rgba(255,255,255,0.45)",
-            strokeWidth: "1.2"
-          }
-        ),
-        /* @__PURE__ */ React.createElement(
-          "circle",
-          {
-            cx: half * 0.72,
-            cy: ballR * 0.58,
-            r: ptrW * 0.07,
-            fill: "rgba(255,255,255,0.7)"
+            ref: canvasRef,
+            width: size,
+            height: size,
+            onClick: spin,
+            style: {
+              borderRadius: "50%",
+              cursor: spinning ? "default" : "pointer",
+              display: "block",
+              maxWidth: "100%"
+            }
           }
         )
-      )
-    ),
-    /* @__PURE__ */ React.createElement(
-      "canvas",
-      {
-        ref: canvasRef,
-        width: size,
-        height: size,
-        onClick: spin,
-        style: {
-          borderRadius: "50%",
-          cursor: spinning ? "default" : "pointer",
-          display: "block",
-          maxWidth: "100%"
-        }
-      }
-    )
+      ]
+    }
   );
 });
 var PrizeWheel_default = PrizeWheel;

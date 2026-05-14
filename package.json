@@ -15,12 +15,21 @@
   "type": "module",
   "main": "dist/index.cjs",
   "module": "dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
   "files": [
     "dist"
   ],
   "scripts": {
     "build": "tsup",
     "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "react": ">=16"
   },
   "peerDependencies": {
     "react": ">=16",
