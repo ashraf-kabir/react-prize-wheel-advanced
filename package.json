@@ -1,0 +1,35 @@
+{
+  "name": "react-prize-wheel-advanced",
+  "version": "1.0.0",
+  "description": "React Prize Wheel on Canvas",
+  "homepage": "https://github.com/ashraf-kabir/react-prize-wheel-advanced#readme",
+  "bugs": {
+    "url": "https://github.com/ashraf-kabir/react-prize-wheel-advanced/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashraf-kabir/react-prize-wheel-advanced.git"
+  },
+  "license": "MIT",
+  "author": "Ashraf Kabir",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.js --format cjs,esm --external react",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react": ">=16",
+    "react-dom": ">=16"
+  },
+  "devDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3"
+  }
+}
