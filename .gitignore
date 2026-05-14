@@ -5,6 +5,9 @@ node_modules/
 npm-debug.log*
 *.log
 
+# ignore dist
+dist/
+
 # OS files
 .DS_Store
 Thumbs.db
