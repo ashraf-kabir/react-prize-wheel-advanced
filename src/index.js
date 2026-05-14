@@ -1,1 +1,1 @@
-export { default } from './components/PrizeWheel';
+export { default, default as PrizeWheel } from './components/PrizeWheel';
