@@ -21,7 +21,7 @@ A beautiful, fully customizable **prize wheel** component for React 18+. Built o
 ## 📦 Installation
 
 ```bash
-npm install react-prize-wheel-advanced
+npm install react-prize-wheel-advanced@latest
 ```
 
 ---
@@ -29,7 +29,10 @@ npm install react-prize-wheel-advanced
 ## 🚀 Basic Usage
 
 ```jsx
+// Default import
 import PrizeWheel from 'react-prize-wheel-advanced';
+// Named import (also works)
+// import { PrizeWheel } from 'react-prize-wheel-advanced';
 
 export default function App() {
   const segments = ['Alice', 'Bob', 'Charlie', 'Diana', 'Edward'];
