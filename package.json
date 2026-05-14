@@ -10,6 +10,21 @@
     "type": "git",
     "url": "git+https://github.com/ashraf-kabir/react-prize-wheel-advanced.git"
   },
+  "keywords": [
+    "react",
+    "wheel",
+    "prize-wheel",
+    "spin-wheel",
+    "wheel-of-fortune",
+    "raffle",
+    "lottery",
+    "canvas",
+    "spinner",
+    "random-picker",
+    "prize",
+    "game",
+    "react-component"
+  ],
   "license": "MIT",
   "author": "Ashraf Kabir",
   "type": "module",
