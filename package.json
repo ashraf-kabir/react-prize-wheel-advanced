@@ -19,7 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.js --format cjs,esm --external react",
+    "build": "tsup",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {

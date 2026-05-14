@@ -1,6 +1,8 @@
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -14,6 +16,14 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  // If the importer is in node compatibility mode or this is not an ESM
+  // file that has been converted to a CommonJS file using a Babel-
+  // compatible transform (i.e. "__esModule" has not been set), then set
+  // "default" to the CommonJS "module.exports" for node compatibility.
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.js
@@ -24,7 +34,7 @@ __export(index_exports, {
 module.exports = __toCommonJS(index_exports);
 
 // src/components/PrizeWheel.jsx
-var import_react = require("react");
+var import_react = __toESM(require("react"), 1);
 var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
   segments = [],
   segColors = [],
@@ -229,7 +239,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
     `C ${ptrW - 3} ${ptrH * 0.35}, ${ptrW * 0.85} ${ptrH * 0.62}, ${half} ${tipY}`,
     "Z"
   ].join(" ");
-  return /* @__PURE__ */ React.createElement(
+  return /* @__PURE__ */ import_react.default.createElement(
     "div",
     {
       style: {
@@ -240,7 +250,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
         userSelect: "none"
       }
     },
-    /* @__PURE__ */ React.createElement(
+    /* @__PURE__ */ import_react.default.createElement(
       "div",
       {
         style: {
@@ -251,7 +261,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
           lineHeight: 0
         }
       },
-      /* @__PURE__ */ React.createElement(
+      /* @__PURE__ */ import_react.default.createElement(
         "svg",
         {
           width: ptrW,
@@ -260,8 +270,8 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
           xmlns: "http://www.w3.org/2000/svg",
           overflow: "visible"
         },
-        /* @__PURE__ */ React.createElement("defs", null, /* @__PURE__ */ React.createElement("linearGradient", { id: "ptrBody", x1: "0%", y1: "0%", x2: "100%", y2: "100%" }, /* @__PURE__ */ React.createElement("stop", { offset: "0%", stopColor: lighten(primaryColor, 65) }), /* @__PURE__ */ React.createElement("stop", { offset: "40%", stopColor: primaryColor }), /* @__PURE__ */ React.createElement("stop", { offset: "100%", stopColor: darken(primaryColor, 45) })), /* @__PURE__ */ React.createElement("radialGradient", { id: "ptrShine", cx: "38%", cy: "28%", r: "58%" }, /* @__PURE__ */ React.createElement("stop", { offset: "0%", stopColor: "rgba(255,255,255,0.6)" }), /* @__PURE__ */ React.createElement("stop", { offset: "100%", stopColor: "rgba(255,255,255,0)" }))),
-        /* @__PURE__ */ React.createElement(
+        /* @__PURE__ */ import_react.default.createElement("defs", null, /* @__PURE__ */ import_react.default.createElement("linearGradient", { id: "ptrBody", x1: "0%", y1: "0%", x2: "100%", y2: "100%" }, /* @__PURE__ */ import_react.default.createElement("stop", { offset: "0%", stopColor: lighten(primaryColor, 65) }), /* @__PURE__ */ import_react.default.createElement("stop", { offset: "40%", stopColor: primaryColor }), /* @__PURE__ */ import_react.default.createElement("stop", { offset: "100%", stopColor: darken(primaryColor, 45) })), /* @__PURE__ */ import_react.default.createElement("radialGradient", { id: "ptrShine", cx: "38%", cy: "28%", r: "58%" }, /* @__PURE__ */ import_react.default.createElement("stop", { offset: "0%", stopColor: "rgba(255,255,255,0.6)" }), /* @__PURE__ */ import_react.default.createElement("stop", { offset: "100%", stopColor: "rgba(255,255,255,0)" }))),
+        /* @__PURE__ */ import_react.default.createElement(
           "path",
           {
             d: bodyPath,
@@ -271,7 +281,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
             strokeLinejoin: "round"
           }
         ),
-        /* @__PURE__ */ React.createElement(
+        /* @__PURE__ */ import_react.default.createElement(
           "ellipse",
           {
             cx: half,
@@ -281,7 +291,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
             fill: "url(#ptrShine)"
           }
         ),
-        /* @__PURE__ */ React.createElement(
+        /* @__PURE__ */ import_react.default.createElement(
           "circle",
           {
             cx: half,
@@ -292,7 +302,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
             strokeWidth: "1.2"
           }
         ),
-        /* @__PURE__ */ React.createElement(
+        /* @__PURE__ */ import_react.default.createElement(
           "circle",
           {
             cx: half * 0.72,
@@ -303,7 +313,7 @@ var PrizeWheel = (0, import_react.forwardRef)(function PrizeWheel2({
         )
       )
     ),
-    /* @__PURE__ */ React.createElement(
+    /* @__PURE__ */ import_react.default.createElement(
       "canvas",
       {
         ref: canvasRef,

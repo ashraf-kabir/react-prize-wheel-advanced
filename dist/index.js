@@ -1,5 +1,5 @@
 // src/components/PrizeWheel.jsx
-import {
+import React, {
   useRef,
   useEffect,
   useImperativeHandle,
